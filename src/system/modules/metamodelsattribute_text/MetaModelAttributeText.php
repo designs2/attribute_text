@@ -28,7 +28,7 @@ if (!defined('TL_ROOT'))
 class MetaModelAttributeText extends MetaModelAttributeSimple
 {
 
-	public static function getSQLDataType()
+	public function getSQLDataType()
 	{
 		return 'varchar(255) NOT NULL default \'\'';
 	}
