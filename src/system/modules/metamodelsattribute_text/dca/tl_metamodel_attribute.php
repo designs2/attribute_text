@@ -5,7 +5,7 @@
  * Table tl_metamodel_attribute 
  */
 
-$GLOBALS['TL_DCA']['tl_metamodel_attribute']['metapalettes']['text extends _simplefield_'] = array
+$GLOBALS['TL_DCA']['tl_metamodel_attribute']['metapalettes']['text extends _simpleattribute_'] = array
 (
 //	'+display' => array('titleField after name')
 );
