@@ -33,9 +33,9 @@ class MetaModelAttributeText extends MetaModelAttributeSimple
 		return 'varchar(255) NOT NULL default \'\'';
 	}
 
-	public static function getFieldSettingNames()
+	public static function getAttributeSettingNames()
 	{
-		return array_merge(parent::getFieldSettingNames(), array(
+		return array_merge(parent::getAttributeSettingNames(), array(
 			'parentCheckbox',
 			'titleField',
 			'width50',
