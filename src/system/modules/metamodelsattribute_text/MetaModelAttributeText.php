@@ -58,6 +58,14 @@ class MetaModelAttributeText extends MetaModelAttributeSimple
 		$arrFieldDef['inputType'] = 'text';
 		return $arrFieldDef;
 	}
+
+
+	public function parseValue($arrRowData, $strOutputFormat = 'html')
+	{
+		$arrResult = parent::parseValue($arrRowData, $strOutputFormat);
+		$arrResult['html'] = $arrRowData[$this->getColName()];
+		return $arrResult;
+	}
 }
 
 ?>
