@@ -66,6 +66,16 @@ class MetaModelAttributeText extends MetaModelAttributeSimple
 		$arrResult['html'] = $arrRowData[$this->getColName()];
 		return $arrResult;
 	}
+
+	/**
+	 * {@inheritdoc}
+	 */
+	public function sortIds($arrIds, $strDirection)
+	{
+		$objDB = Database::getInstance();
+		$objSorted = $objDB->execute('SELECT id FROM ' . $this->getMetaModel()->getTableName() . ' WHERE id IN (' . implode(',', array_map('intval', $arrIds)) . ') ORDER BY ' . $this->getColName() . ' ' . $strDirection);
+		return $objSorted->fetchEach('id');
+	}
 }
 
 ?>
