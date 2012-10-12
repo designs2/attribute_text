@@ -20,7 +20,7 @@ if (!defined('TL_ROOT'))
 
 /**
  * This is the MetaModelAttribute class for handling text fields.
- * 
+ *
  * @package	   MetaModels
  * @subpackage AttributeText
  * @author     Christian Schiffler <c.schiffler@cyberspectrum.de>
@@ -35,21 +35,7 @@ class MetaModelAttributeText extends MetaModelAttributeSimple
 
 	public function getAttributeSettingNames()
 	{
-		return array_merge(parent::getAttributeSettingNames(), array(
-			'parentCheckbox',
-			'titleField',
-			'width50',
-			'insertBreak',
-			'sortingField',
-			'filteredField',
-			'searchableField',
-			'mandatory',
-			'defValue',
-			'uniqueItem',
-			'formatPrePost',
-			'format',
-			'editGroups'
-		));
+		return array_merge(parent::getAttributeSettingNames(), array('isunique'));
 	}
 
 	public function getFieldDefinition()
@@ -57,16 +43,6 @@ class MetaModelAttributeText extends MetaModelAttributeSimple
 		$arrFieldDef=parent::getFieldDefinition();
 		$arrFieldDef['inputType'] = 'text';
 		return $arrFieldDef;
-	}
-
-	/**
-	 * {@inheritdoc}
-	 */
-	public function sortIds($arrIds, $strDirection)
-	{
-		$objDB = Database::getInstance();
-		$objSorted = $objDB->execute('SELECT id FROM ' . $this->getMetaModel()->getTableName() . ' WHERE id IN (' . implode(',', array_map('intval', $arrIds)) . ') ORDER BY ' . $this->getColName() . ' ' . $strDirection);
-		return $objSorted->fetchEach('id');
 	}
 }
 
