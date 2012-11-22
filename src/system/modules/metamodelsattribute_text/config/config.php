@@ -21,7 +21,7 @@ if (!defined('TL_ROOT'))
 $GLOBALS['METAMODELS']['attributes']['text'] = array
 (
 	'class' => 'MetaModelAttributeText',
-	'image' => 'system/modules/metamodelsattribute_text/html/text.gif'
+	'image' => 'system/modules/metamodelsattribute_text/html/text.png'
 );
 
 ?>
