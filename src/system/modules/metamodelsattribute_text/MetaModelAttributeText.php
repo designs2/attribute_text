@@ -35,7 +35,18 @@ class MetaModelAttributeText extends MetaModelAttributeSimple
 
 	public function getAttributeSettingNames()
 	{
-		return array_merge(parent::getAttributeSettingNames(), array('isunique', 'flag', 'searchable', 'filterable', 'sortable'));
+		return array_merge(parent::getAttributeSettingNames(), array(
+			'isunique',
+			'flag',
+			'searchable',
+			'filterable',
+			'sortable',
+			'decodeEntities',
+			'mandatory',
+			'decodeEntities',
+			'trailingSlash',
+			'spaceToUnderscore'
+		));
 	}
 
 	public function getFieldDefinition($arrOverrides = array())

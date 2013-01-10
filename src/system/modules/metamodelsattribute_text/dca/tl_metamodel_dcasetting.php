@@ -13,13 +13,9 @@ array
 	),
 	'advanced' => array
 	(
-		'allowHtml',
-		'preserveTags',
 		'decodeEntities',
 		'trailingSlash',
 		'spaceToUnderscore',
-		'rows',
-		'cols',
 	),
 );
 
