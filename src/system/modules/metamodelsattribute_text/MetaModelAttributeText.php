@@ -35,12 +35,12 @@ class MetaModelAttributeText extends MetaModelAttributeSimple
 
 	public function getAttributeSettingNames()
 	{
-		return array_merge(parent::getAttributeSettingNames(), array('isunique'));
+		return array_merge(parent::getAttributeSettingNames(), array('isunique', 'flag', 'searchable', 'filterable', 'sortable'));
 	}
 
-	public function getFieldDefinition()
+	public function getFieldDefinition($arrOverrides = array())
 	{
-		$arrFieldDef=parent::getFieldDefinition();
+		$arrFieldDef=parent::getFieldDefinition($arrOverrides);
 		$arrFieldDef['inputType'] = 'text';
 		return $arrFieldDef;
 	}
