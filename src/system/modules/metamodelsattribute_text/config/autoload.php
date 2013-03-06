@@ -10,28 +10,25 @@
  * @package     MetaModels
  * @subpackage  AttributeText
  * @author      Christian Schiffler <c.schiffler@cyberspectrum.de>
+ * @author      Andreas Isaak <info@andreas-isaak.de>
  * @copyright   The MetaModels team.
  * @license     LGPL.
  * @filesource
  */
 
-$GLOBALS['TL_DCA']['tl_metamodel_dcasetting']['metasubselectpalettes']['attr_id']['text'] = array
+/**
+ * Register the classes
+ */
+ClassLoader::addClasses(array
 (
-	'presentation' => array(
-		'tl_class', 
-	),
-	'functions'  => array(
-		'mandatory',
-		'allowHtml',
-		'preserveTags',
-		'decodeEntities',
-		'trailingSlash',
-		'spaceToUnderscore',	
-	),
-	'overview' => array(		
-		'filterable',
-		'searchable',
-		'sortable',
-		'flag'
-	)
-);
+	'MetaModelAttributeText'              => 'system/modules/metamodelsattribute_text/MetaModelAttributeText.php',
+));
+
+
+/**
+ * Register the templates
+ */
+TemplateLoader::addFiles(array
+(
+	'mm_attr_text'              => 'system/modules/metamodelsattribute_text/templates',
+));
