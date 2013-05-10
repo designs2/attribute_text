@@ -38,7 +38,6 @@ class MetaModelAttributeText extends MetaModelAttributeSimple
 			'searchable',
 			'filterable',
 			'sortable',
-			'decodeEntities',
 			'mandatory',
 			'decodeEntities',
 			'trailingSlash',
