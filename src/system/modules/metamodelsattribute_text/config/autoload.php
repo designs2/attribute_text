@@ -22,7 +22,7 @@
 ClassLoader::addClasses(array
 (
 	'MetaModels\Attribute\Text\Text'      => 'system/modules/metamodelsattribute_text/MetaModels/Attribute/Text/Text.php',
-	'MetaModelAttributeText'              => 'system/modules/metamodelsattribute_text/MetaModelAttributeText.php',
+	'MetaModelAttributeText'              => 'system/modules/metamodelsattribute_text/deprecated/MetaModelAttributeText.php',
 ));
 
 
