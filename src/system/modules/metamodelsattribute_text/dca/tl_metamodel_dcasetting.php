@@ -26,9 +26,9 @@ $GLOBALS['TL_DCA']['tl_metamodel_dcasetting']['metasubselectpalettes']['attr_id'
 		'preserveTags',
 		'decodeEntities',
 		'trailingSlash',
-		'spaceToUnderscore',	
+		'spaceToUnderscore',
 	),
-	'overview' => array(		
+	'overview' => array(
 		'filterable',
 		'searchable',
 		'sortable',
