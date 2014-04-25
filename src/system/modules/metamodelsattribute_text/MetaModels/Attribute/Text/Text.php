@@ -21,7 +21,7 @@ use MetaModels\Attribute\BaseSimple;
 /**
  * This is the MetaModelAttribute class for handling text fields.
  *
- * @package	   MetaModels
+ * @package    MetaModels
  * @subpackage AttributeText
  * @author     Christian Schiffler <c.schiffler@cyberspectrum.de>
  */
@@ -58,7 +58,7 @@ class Text extends BaseSimple
 	 */
 	public function getFieldDefinition($arrOverrides = array())
 	{
-		$arrFieldDef=parent::getFieldDefinition($arrOverrides);
+		$arrFieldDef              = parent::getFieldDefinition($arrOverrides);
 		$arrFieldDef['inputType'] = 'text';
 		return $arrFieldDef;
 	}
