@@ -28,39 +28,39 @@ use MetaModels\Attribute\BaseSimple;
  */
 class Text extends BaseSimple
 {
-	/**
-	 * {@inheritdoc}
-	 */
-	public function getSQLDataType()
-	{
-		return 'varchar(255) NOT NULL default \'\'';
-	}
+    /**
+     * {@inheritdoc}
+     */
+    public function getSQLDataType()
+    {
+        return 'varchar(255) NOT NULL default \'\'';
+    }
 
-	/**
-	 * {@inheritdoc}
-	 */
-	public function getAttributeSettingNames()
-	{
-		return array_merge(parent::getAttributeSettingNames(), array(
-			'isunique',
-			'flag',
-			'searchable',
-			'filterable',
-			'sortable',
-			'mandatory',
-			'decodeEntities',
-			'trailingSlash',
-			'spaceToUnderscore'
-		));
-	}
+    /**
+     * {@inheritdoc}
+     */
+    public function getAttributeSettingNames()
+    {
+        return array_merge(parent::getAttributeSettingNames(), array(
+            'isunique',
+            'flag',
+            'searchable',
+            'filterable',
+            'sortable',
+            'mandatory',
+            'decodeEntities',
+            'trailingSlash',
+            'spaceToUnderscore'
+        ));
+    }
 
-	/**
-	 * {@inheritdoc}
-	 */
-	public function getFieldDefinition($arrOverrides = array())
-	{
-		$arrFieldDef              = parent::getFieldDefinition($arrOverrides);
-		$arrFieldDef['inputType'] = 'text';
-		return $arrFieldDef;
-	}
+    /**
+     * {@inheritdoc}
+     */
+    public function getFieldDefinition($arrOverrides = array())
+    {
+        $arrFieldDef              = parent::getFieldDefinition($arrOverrides);
+        $arrFieldDef['inputType'] = 'text';
+        return $arrFieldDef;
+    }
 }
