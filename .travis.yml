@@ -22,7 +22,3 @@ script: ant -keep-going
 branches:
   only:
     - tng
-
-branches:
-  only:
-    - tng
