@@ -6,18 +6,19 @@
  * data in each collection.
  *
  * PHP version 5
+ *
  * @package     MetaModels
  * @subpackage  AttributeText
  * @author      Christian Schiffler <c.schiffler@cyberspectrum.de>
- * @author Andreas Isaak <info@andreas-isaak.de>
- * @author Christopher Boelter <christopher@boelter.eu>
+ * @author      Andreas Isaak <info@andreas-isaak.de>
+ * @author      Christopher Boelter <christopher@boelter.eu>
  * @copyright   The MetaModels team.
  * @license     LGPL.
  * @filesource
  */
 
 /**
- * Table tl_metamodel_attribute 
+ * Table tl_metamodel_attribute
  */
 
 $GLOBALS['TL_DCA']['tl_metamodel_attribute']['metapalettes']['text extends _simpleattribute_'] = array();
