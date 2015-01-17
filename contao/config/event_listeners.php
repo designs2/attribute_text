@@ -18,9 +18,16 @@
 use MetaModels\Attribute\Events\CreateAttributeFactoryEvent;
 use MetaModels\Attribute\Text\AttributeTypeFactory;
 use MetaModels\MetaModelsEvents;
+use MetaModels\Events\MetaModelsBootEvent;
+use MetaModels\DcGeneral\Events\Table\InputScreens\TextSubscriber;
 
 return array
 (
+    MetaModelsEvents::SUBSYSTEM_BOOT_BACKEND => array(
+        function (MetaModelsBootEvent $event) {
+            new TextSubscriber($event->getServiceContainer());
+        }
+    ),
     MetaModelsEvents::ATTRIBUTE_FACTORY_CREATE => array(
         function (CreateAttributeFactoryEvent $event) {
             $factory = $event->getFactory();

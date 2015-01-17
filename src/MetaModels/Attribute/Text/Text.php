@@ -52,7 +52,8 @@ class Text extends BaseSimple
             'mandatory',
             'decodeEntities',
             'trailingSlash',
-            'spaceToUnderscore'
+            'spaceToUnderscore',
+            'rgxp'
         ));
     }
 
@@ -63,6 +64,11 @@ class Text extends BaseSimple
     {
         $arrFieldDef              = parent::getFieldDefinition($arrOverrides);
         $arrFieldDef['inputType'] = 'text';
+
+        if ($arrOverrides['rgxp']) {
+            $arrFieldDef['eval']['rgxp'] = $arrOverrides['rgxp'];
+        }
+
         return $arrFieldDef;
     }
 }
