@@ -15,7 +15,7 @@
  * @filesource
  */
 
-namespace MetaModels\DcGeneral\Events\Table\InputScreens;
+namespace MetaModels\Attribute\Text;
 
 use ContaoCommunityAlliance\DcGeneral\Contao\View\Contao2BackendView\Event\GetPropertyOptionsEvent;
 use MetaModels\DcGeneral\Events\BaseSubscriber;

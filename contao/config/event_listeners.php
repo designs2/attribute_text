@@ -19,7 +19,7 @@ use MetaModels\Attribute\Events\CreateAttributeFactoryEvent;
 use MetaModels\Attribute\Text\AttributeTypeFactory;
 use MetaModels\MetaModelsEvents;
 use MetaModels\Events\MetaModelsBootEvent;
-use MetaModels\DcGeneral\Events\Table\InputScreens\BackendSubscriber;
+use MetaModels\Attribute\Text\BackendSubscriber;
 
 return array
 (
