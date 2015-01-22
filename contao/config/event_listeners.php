@@ -18,9 +18,16 @@
 use MetaModels\Attribute\Events\CreateAttributeFactoryEvent;
 use MetaModels\Attribute\Text\AttributeTypeFactory;
 use MetaModels\MetaModelsEvents;
+use MetaModels\Events\MetaModelsBootEvent;
+use MetaModels\Attribute\Text\BackendSubscriber;
 
 return array
 (
+    MetaModelsEvents::SUBSYSTEM_BOOT_BACKEND => array(
+        function (MetaModelsBootEvent $event) {
+            new BackendSubscriber($event->getServiceContainer());
+        }
+    ),
     MetaModelsEvents::ATTRIBUTE_FACTORY_CREATE => array(
         function (CreateAttributeFactoryEvent $event) {
             $factory = $event->getFactory();

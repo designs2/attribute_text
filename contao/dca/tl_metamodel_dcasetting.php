@@ -32,6 +32,7 @@ $GLOBALS['TL_DCA']['tl_metamodel_dcasetting']['metasubselectpalettes']['attr_id'
         'decodeEntities',
         'trailingSlash',
         'spaceToUnderscore',
+        'rgxp',
     ),
     'overview'     => array
     (
@@ -39,5 +40,17 @@ $GLOBALS['TL_DCA']['tl_metamodel_dcasetting']['metasubselectpalettes']['attr_id'
         'searchable',
         'sortable',
         'flag'
+    )
+);
+
+$GLOBALS['TL_DCA']['tl_metamodel_dcasetting']['fields']['rgxp'] = array
+(
+    'label'     => &$GLOBALS['TL_LANG']['tl_metamodel_dcasetting']['rgxp'],
+    'exclude'   => true,
+    'inputType' => 'select',
+    'eval'      => array
+    (
+        'tl_class'           => 'clr',
+        'includeBlankOption' => true
     )
 );
