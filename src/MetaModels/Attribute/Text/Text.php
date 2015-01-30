@@ -48,6 +48,8 @@ class Text extends BaseSimple
             'searchable',
             'filterable',
             'mandatory',
+            'allowHtml',
+            'preserveTags',
             'decodeEntities',
             'trailingSlash',
             'spaceToUnderscore',
