@@ -45,10 +45,8 @@ class Text extends BaseSimple
     {
         return array_merge(parent::getAttributeSettingNames(), array(
             'isunique',
-            'flag',
             'searchable',
             'filterable',
-            'sortable',
             'mandatory',
             'decodeEntities',
             'trailingSlash',
